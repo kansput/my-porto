@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-scroll: scroll 40s linear infinite;
+  --color-neo-yellow: #fbff48;
+  --color-neo-pink: #ff70a6;
+  --color-neo-blue: #3b82f6;
+  --color-neo-green: #33ff57;
+  --color-neo-purple: #a855f7;
+  --color-neo-black: #121212;
+  --color-neo-white: #fffdf5;
+
+  --shadow-hard: 4px 4px 0px 0px #000;
+  --shadow-hard-lg: 8px 8px 0px 0px #000;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+:root {
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+}
+* {
+  cursor: none !important;
+}
+body {
+ 
+  background-color: #fffdf5;
+  background-image:
+    radial-gradient(#000 1px, transparent 1px),
+    linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+  background-size:
+    40px 40px,
+    100px 100px,
+    100px 100px;
+}
