@@ -8,10 +8,10 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0 opacity-30"
         style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }} />
 
-      {/* 2. Floating Giant Text (Background) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-black text-[25vw] text-black/[0.03] whitespace-nowrap select-none uppercase pointer-events-none">
+      {/* 2. Floating Giant Text - Diubah ke H2 untuk SEO Keyword */}
+      <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-black text-[25vw] text-black/[0.03] whitespace-nowrap select-none uppercase pointer-events-none">
         Fullstack_Engineer
-      </div>
+      </h2>
 
       {/* 3. Decorative Shapes & Icons */}
       <div className="absolute top-[15%] left-[5%] w-20 h-20 bg-neo-yellow border-4 border-black shadow-hard -rotate-12 animate-bounce hidden md:block" />
@@ -21,7 +21,7 @@ export const Hero = () => {
       </div>
       <div className="absolute bottom-[20%] left-[8%] p-4 bg-neo-blue border-4 border-black shadow-hard -rotate-6 hidden md:flex items-center gap-2">
         <RiCloudLine className="text-2xl text-white" />
-        <span className="font-mono font-bold text-xs text-white">CLOUD</span>
+        <span className="font-mono font-bold text-xs text-white">CLOUD_ENGINEER</span>
       </div>
 
       {/* 4. Main Content */}
@@ -33,11 +33,13 @@ export const Hero = () => {
           </div>
           <div className="bg-neo-black text-white border-2 border-black px-4 py-1 shadow-hard rotate-1 flex items-center gap-2">
             <div className="w-2 h-2 bg-neo-green rounded-full animate-ping" />
-            <span className="font-mono font-bold uppercase text-sm">Available for Hire</span>
+            <span className="font-mono font-bold uppercase text-sm">Freelance Available</span>
           </div>
         </div>
 
+        {/* H1 Utama dengan Hidden Text untuk Keyword Tambahan */}
         <h1 className="text-[14vw] md:text-[11vw] leading-[0.75] font-black uppercase tracking-tighter mb-8 italic">
+          <span className="sr-only">Kanda Putra | Freelance Web Developer & </span>
           Software<br />
           <span className="text-white drop-shadow-[6px_6px_0_rgba(0,0,0,1)]"
             style={{ WebkitTextStroke: '3px black' }}>Engineer</span>
@@ -45,11 +47,11 @@ export const Hero = () => {
 
         <div className="relative inline-block">
           <p className="font-mono text-lg md:text-2xl max-w-2xl mx-auto bg-neo-pink border-4 border-black p-6 shadow-hard-lg rotate-[-1deg] mb-10">
-            I build high-performance web systems with a focus on <b>Fullstack Engineering</b> and <b>Scalable </b>
+            I build high-performance web systems with a focus on <b>Web Coding</b>, <b>Fullstack Engineering</b> and <b>Cloud Solutions</b>.
           </p>
-          {/* Bug Hunter Badge overlaying the description */}
+          {/* Badge dengan keyword tambahan */}
           <div className="absolute -right-6 -bottom-6 bg-neo-black text-neo-green border-2 border-black px-3 py-1 font-mono font-bold rotate-12 flex items-center gap-1 shadow-hard">
-            <RiTerminalLine /> FULLSTACK_DEV
+            <RiTerminalLine /> WEB_DEVELOPER
           </div>
         </div>
 
@@ -58,8 +60,8 @@ export const Hero = () => {
           <a href="#projects" className="bg-neo-green text-black border-4 border-black px-8 py-4 text-2xl font-black uppercase shadow-hard hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
             View_Projects
           </a>
-          <a href="#about" className="bg-white text-black border-4 border-black px-8 py-4 text-2xl font-black uppercase shadow-hard hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
-            Get_In_Touch
+          <a href="#contact" className="bg-white text-black border-4 border-black px-8 py-4 text-2xl font-black uppercase shadow-hard hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+            Hire_Me
           </a>
         </div>
       </div>

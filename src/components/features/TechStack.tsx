@@ -1,18 +1,17 @@
 "use client";
 import {
   SiNextdotjs, SiPostgresql, SiTypescript, SiPython, SiNodedotjs,
-  SiTailwindcss, SiMysql, SiPhp, SiCodeigniter, SiGooglecloud, SiBootstrap, SiGithub, SiGit,SiVercel
+  SiTailwindcss, SiMysql, SiPhp, SiCodeigniter, SiGooglecloud, SiBootstrap, SiGithub, SiGit, SiVercel
 } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 import { DiMsqlServer } from "react-icons/di";
-
 import { RiShieldKeyholeLine, RiBugLine } from "react-icons/ri";
 
 const skills = [
   { name: "Next.js", type: "Framework", icon: <SiNextdotjs />, color: "hover:bg-white" },
   { name: "PostgreSQL", type: "Data", icon: <SiPostgresql />, color: "hover:bg-neo-blue" },
   { name: "TypeScript", type: "Language", icon: <SiTypescript />, color: "hover:bg-neo-pink" },
-  { name: "GCP", type: "Cloud", icon: <SiGooglecloud />, color: "hover:bg-neo-yellow" }, // [cite: 2026-02-23]
+  { name: "GCP", type: "Cloud", icon: <SiGooglecloud />, color: "hover:bg-neo-yellow" },
   { name: "Python", type: "Language", icon: <SiPython />, color: "hover:bg-neo-blue" },
   { name: "Node.js", type: "Backend", icon: <SiNodedotjs />, color: "hover:bg-neo-green" },
   { name: "Tailwind", type: "Styling", icon: <SiTailwindcss />, color: "hover:bg-neo-orange" },
@@ -39,6 +38,7 @@ export const TechStack = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4">
           <h2 className="text-6xl md:text-8xl font-black uppercase text-white tracking-tighter">
             TECH<span className="text-neo-green">_STACK</span>
+            <span className="sr-only">. Kanda Putra's Web Development and Cloud Engineering Skills.</span>
           </h2>
           <div className="flex items-center gap-2 mb-2 md:mb-4">
             <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
@@ -46,14 +46,16 @@ export const TechStack = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center md:justify-start border-t-2 border-l-2 border-white/10">
+        {/* Gunakan Tag UL & LI agar Google tahu ini adalah sebuah List Skill */}
+        <ul className="flex flex-wrap justify-center md:justify-start border-t-2 border-l-2 border-white/10 list-none p-0">
           {skills.map((skill, index) => (
-            <div
+            <li
               key={index}
               className={`group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-32 border-r-2 border-b-2 border-white/10 
               bg-neo-black transition-all duration-200 hover:z-10 relative flex flex-col items-center justify-center p-4 cursor-pointer ${skill.color} hover:text-black`}
+              title={`${skill.name} - ${skill.type} for Web Coding`}
             >
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-200">
+              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 {skill.icon}
               </div>
               <div className="text-neo-green group-hover:text-black font-mono text-[10px] mb-1 opacity-50 uppercase tracking-tighter">
@@ -62,14 +64,16 @@ export const TechStack = () => {
               <div className="font-black font-display text-sm uppercase text-center leading-tight">
                 {skill.name}
               </div>
-            </div>
+              {/* Hidden text untuk bot agar mengasosiasikan skill dengan profesimu */}
+              <span className="sr-only">{`Expertise in ${skill.name} for Software Engineering.`}</span>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500 uppercase">
           <span>Total_Nodes: {skills.length}</span>
           <span>Security_Level: High </span>
-          <span>Status: Verified_Engineer </span>
+          <span>Status: Verified_Cloud_Engineer </span>
         </div>
       </div>
     </section>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.kandaputra.my.id
+
+# Sitemaps
+Sitemap: https://www.kandaputra.my.id/sitemap.xml

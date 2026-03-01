@@ -57,26 +57,37 @@ const experiences: ExpType[] = [
 export const Experience = () => {
   return (
     <section id="experience" className="py-24 px-4 max-w-7xl mx-auto">
-      <h2 className="text-5xl md:text-8xl font-black uppercase mb-12 tracking-tighter text-center">
-        Experience<span className="text-neo-red">_Log</span>
-      </h2>
-      <div className="relative border-l-4 border-black ml-4 md:ml-10 space-y-12">
+      <header>
+        <h2 className="text-5xl md:text-8xl font-black uppercase mb-12 tracking-tighter text-center">
+          Experience<span className="text-neo-red">_Log</span>
+          <span className="sr-only">. Professional Journey of Kanda Putra, Software Engineer and Cloud Specialist.</span>
+        </h2>
+      </header>
+
+      <ol className="relative border-l-4 border-black ml-4 md:ml-10 space-y-12 list-none p-0">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="relative pl-8 md:pl-16">
-            <div className={`absolute -left-[14px] top-2 w-6 h-6 border-4 border-black ${exp.color}`}></div>
-            <div className="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-lg transition-all">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
-                <h3 className="text-3xl font-black uppercase">{exp.role}</h3>
-                <span className="font-mono font-bold bg-neo-black text-white px-2 py-1">{exp.period}</span>
+          <li key={idx} className="relative pl-8 md:pl-16">
+            <article>
+              <div className={`absolute -left-[14px] top-2 w-6 h-6 border-4 border-black ${exp.color}`}></div>
+              <div className="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-lg transition-all">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                  <h3 className="text-3xl font-black uppercase">
+                    {exp.role}
+                    <span className="sr-only"> at {exp.company}</span>
+                  </h3>
+                  <span className="font-mono font-bold bg-neo-black text-white px-2 py-1">{exp.period}</span>
+                </div>
+                <p className="font-mono text-xl mb-2 font-bold uppercase">@ {exp.company}</p>
+                <ul className="list-disc list-inside font-mono text-gray-700 space-y-1">
+                  {exp.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </div>
-              <p className="font-mono text-xl mb-2 font-bold uppercase">@ {exp.company}</p>
-              <ul className="list-disc list-inside font-mono text-gray-700 space-y-1">
-                {exp.points.map((point, i) => <li key={i}>{point}</li>)}
-              </ul>
-            </div>
-          </div>
+            </article>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   );
 };
