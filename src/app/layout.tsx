@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Kanda Putra | Software Engineer & Cloud Specialist",
-  description: "Professional portfolio of Kanda Putra, a Freelance Software Engineer and Cloud Engineer. Expert in Web Coding, Fullstack development, and scalable cloud architectures.",
+  description: "Kanda Putra, a Freelance Software Engineer & Cloud Specialist, builds high-performance web systems and scalable cloud solutions with a unique NeoBrutalist aesthetic and expert coding.",
   keywords: [
     "Kanda Putra", "Freelance", "Web Coding", "Web Developer",
     "Software Engineer", "Cloud Engineer", "Cloud Specialist",
@@ -30,12 +30,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.kandaputra.my.id",
   },
-  verification: {
-    google: "googleb9134903ef35e2fe", // Masukkan ID uniknya saja [cite: 2026-03-01]
-  },
   openGraph: {
     title: "Kanda Putra | Software Engineer & Cloud Specialist",
-    description: "Building high-performance web systems and scalable cloud solutions with NeoBrutalist aesthetics.",
+    // Deskripsi diperpanjang agar mencapai 150+ karakter (Optimal untuk SEO) [cite: 2026-03-01]
+    description: "Kanda Putra is a Freelance Software Engineer & Cloud Specialist building high-performance web systems and scalable cloud solutions with a refined NeoBrutalist aesthetic.",
     url: "https://www.kandaputra.my.id",
     siteName: "Kanda Putra Portfolio",
     locale: "id_ID",
@@ -45,7 +43,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kanda Putra | Software Engineer",
     description: "Freelance Software Engineer & Cloud Specialist.",
-    creator: "@kandaputrah",
+    // Hapus creator twitter jika tidak ada
+  },
+  verification: {
+    // PAKAI KODE BARU INI [cite: 2026-03-01]
+    google: "7rdFqC9-x2SIGjB83mHAPNoiE1CgA_7PSTuStqVze18",
   },
   robots: {
     index: true,
