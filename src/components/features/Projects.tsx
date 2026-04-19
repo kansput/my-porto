@@ -29,6 +29,22 @@ const allProjects = [
     slug: "sirindu"
   },
   {
+    title: "Smart Lansia",
+    description: "Digital health ecosystem for elderly wellness monitoring and health education. Developed by Kanda Putra.",
+    tags: ["Next.js", "HealthTech", "ElderlyCare", "Frontend", "Monitoring"],
+    image: "/images/smart.webp",
+    link: "https://smartlansia.web.id/",
+    slug: "smart-lansia"
+  },
+  {
+    title: "SIBO",
+    description: "Sistem Informasi Bimbingan Online - Integrated platform for digital academic guidance and consultation management.",
+    tags: ["Next.js", "Dashboard", "SystemInformation", "Education", "Fullstack"],
+    image: "/images/sibo.webp",
+    link: "https://sibo.web.id/",
+    slug: "sibo"
+  },
+  {
     title: "Re-Krendisial ",
     description: "Internal dashboard for RS St. Carolus nursing unit re-credentialing. Streamlining medical bureaucracy.",
     tags: ["Next.js", "Dashboard", "Frontend", "Healthcare", "Nursing", "Credentialing"],
